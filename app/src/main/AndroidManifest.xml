@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission. ACCESS_COARSE_LOCATION" />
+
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -14,8 +16,11 @@
         android:theme="@style/Theme.VehicleFinancing"
         tools:targetApi="31">
         <activity
+            android:name=".City_Names"
+            android:exported="false" />
+        <activity
             android:name=".splashscreen"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,13 +29,11 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
-        <activity android:name=".createacc"></activity>
-        <activity android:name=".service"></activity>
-        <activity android:name=".sell"></activity>
-        <activity android:name=".cars"></activity>
+            android:exported="true"></activity>
+        <activity android:name=".createacc" />
+        <activity android:name=".service" />
+        <activity android:name=".sell" />
+        <activity android:name=".cars" />
 
         <meta-data
             android:name="preloaded_fonts"

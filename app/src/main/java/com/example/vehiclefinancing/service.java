@@ -8,11 +8,13 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class service extends AppCompatActivity {
-    ImageView i, img1, img2, img3, img4;
+    ImageView i, img1, img2, img3, img4,img5;
+    TextView t, t1;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,9 @@ public class service extends AppCompatActivity {
         img2=(ImageView) findViewById(R.id.help);
         img3=(ImageView) findViewById(R.id.cars);
         img4=(ImageView) findViewById(R.id.menu);
+        img5=(ImageView) findViewById(R.id.arrow);
+        t=(TextView) findViewById(R.id.choose);
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             Window w = getWindow();
             w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
@@ -48,6 +53,24 @@ public class service extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        t.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(service.this,City_Names.class);
+                startActivity(intent);
+            }
+        });
+        img5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(service.this,City_Names.class);
+                startActivity(intent);
+            }
+        });
+        String newText = getIntent().getStringExtra("new_text");
+        if (newText != null) {
+            t.setText(newText);
+        }
 
 
 
