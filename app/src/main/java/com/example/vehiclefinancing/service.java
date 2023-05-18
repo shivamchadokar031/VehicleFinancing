@@ -13,9 +13,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class service extends AppCompatActivity {
-    ImageView i, img1, img2, img3, img4,img5;
+    ImageView i, img1, img2, img31, img4,img5, img345;
     TextView t, t1;
-    @SuppressLint("MissingInflatedId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,15 +23,23 @@ public class service extends AppCompatActivity {
         i=(ImageView) findViewById(R.id.img3);
         img1=(ImageView) findViewById(R.id.home);
         img2=(ImageView) findViewById(R.id.help);
-        img3=(ImageView) findViewById(R.id.cars);
+        img31=(ImageView) findViewById(R.id.cars);
         img4=(ImageView) findViewById(R.id.menu);
         img5=(ImageView) findViewById(R.id.arrow);
+        img345=(ImageView) findViewById(R.id.car345);
         t=(TextView) findViewById(R.id.choose);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             Window w = getWindow();
             w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         }
+        img31.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(service.this, carsmore.class);
+                startActivity(intent);
+            }
+        });
         i.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,13 +51,6 @@ public class service extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(service.this, service.class);
-                startActivity(intent);
-            }
-        });
-        img3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent= new Intent(service.this, cars.class);
                 startActivity(intent);
             }
         });
@@ -71,6 +72,17 @@ public class service extends AppCompatActivity {
         if (newText != null) {
             t.setText(newText);
         }
+
+        img345.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(service.this, carsmore.class);
+                startActivity(intent);
+            }
+        });
+
+
+
 
 
 

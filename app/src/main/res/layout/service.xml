@@ -70,7 +70,7 @@
             android:layout_below="@id/linear1"
             android:gravity="center"
             android:paddingBottom="10dp">
-            <EditText
+            <androidx.appcompat.widget.SearchView
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="80dp"
@@ -108,6 +108,7 @@
                         android:layout_marginStart="5dp"
                         android:layout_marginTop="5dp">
                         <ImageView
+                            android:id="@+id/car345"
                             android:layout_width="150dp"
                             android:layout_height="110dp"
                             android:src="@drawable/img_1"
