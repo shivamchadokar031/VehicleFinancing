@@ -16,7 +16,7 @@
         android:textStyle="bold"
         android:fontFamily="@font/bungee"
         />
-    <EditText
+    <androidx.appcompat.widget.SearchView
         android:id="@+id/srch"
         android:layout_width="match_parent"
         android:layout_height="50dp"

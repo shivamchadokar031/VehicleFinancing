@@ -7,14 +7,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class service extends AppCompatActivity {
     ImageView i, img1, img2, img31, img4,img5, img345;
     TextView t, t1;
+    FloatingActionButton emi;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +33,7 @@ public class service extends AppCompatActivity {
         img5=(ImageView) findViewById(R.id.arrow);
         img345=(ImageView) findViewById(R.id.car345);
         t=(TextView) findViewById(R.id.choose);
+        emi=findViewById(R.id.add_fab);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             Window w = getWindow();

@@ -78,7 +78,9 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:drawableStart="@drawable/icons8_search_30"/>
+
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -265,6 +267,8 @@
                             android:scaleType="fitCenter"
                             android:src="@drawable/screenshot_2023_0501_110521" />
                     </ViewFlipper>
+
+
                 </RelativeLayout>
                 <TextView
                     android:id="@+id/tv1"
@@ -473,6 +477,20 @@
                 </RelativeLayout>
             </ScrollView>
         </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="80dp"
+        android:src="@drawable/baseline_currency_rupee_24"
+        app:fabSize="normal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent" />
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
