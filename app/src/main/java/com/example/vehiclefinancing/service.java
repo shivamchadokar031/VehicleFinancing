@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -34,6 +35,7 @@ public class service extends AppCompatActivity {
         img345=(ImageView) findViewById(R.id.car345);
         t=(TextView) findViewById(R.id.choose);
         emi=findViewById(R.id.add_fab);
+        FragmentManager fragmentManager=getSupportFragmentManager();
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             Window w = getWindow();
@@ -84,6 +86,15 @@ public class service extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent= new Intent(service.this, carsmore.class);
                 startActivity(intent);
+            }
+        });
+        emi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fragmentManager.beginTransaction().replace(R.id.whole,emicalculator.class,null)
+                        .setReorderingAllowed(true)
+                        .addToBackStack("name")
+                        .commit();
             }
         });
 

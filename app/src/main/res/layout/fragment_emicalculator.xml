@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".alto"
+    tools:ignore="MissingClass">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewBg"
+        android:layout_width="300dp"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#ffffff"
+        app:cardCornerRadius="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Loan Amount"
+            android:id="@+id/loan"
+            android:textAlignment="viewStart"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/amount"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="100dp"
+            android:text="Intrest Rate"
+            android:textAlignment="viewStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/intrest"
+            android:layout_marginTop="135dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="190dp"
+            android:text="Loan Tenure"
+            android:textAlignment="viewStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+        <EditText
+            android:id="@+id/tenure"
+            android:layout_marginTop="225dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/emi1"
+            android:layout_marginTop="270dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="30dp"
+            android:text="EMI"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_height="20dp" />
+
+
+        <TextView
+            android:id="@+id/emi"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="290dp"
+            android:layout_marginBottom="30dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button"
+            android:text="Submit"
+            android:layout_gravity="center"
+            android:layout_marginStart="80dp"
+            android:layout_marginBottom="-120dp"
+            android:textColor="#ffffff"
+            tools:ignore="HardcodedText" />
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

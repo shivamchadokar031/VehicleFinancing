@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".carsmore">
+    tools:context=".carsmore"
+    android:id="@+id/carsmore">
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/search_view"
@@ -46,6 +47,7 @@
                     android:rowCount="8">
 
                     <ImageView
+                        android:id="@+id/alto"
                         android:layout_width="match_parent"
                         android:layout_height="500dp"
                         android:src="@drawable/group_3" />
